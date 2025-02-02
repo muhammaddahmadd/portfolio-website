@@ -1,17 +1,26 @@
-// Toggle Mobile Menu
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+// Initialize Slick Slider
+document.addEventListener('DOMContentLoaded', function () {
+    $('.project-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     });
 });
