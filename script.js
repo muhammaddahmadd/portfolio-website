@@ -1,6 +1,5 @@
 // Initialize Slick Slider
 document.addEventListener('DOMContentLoaded', function () {
-    
     $('.project-slider').slick({
         dots: true,
         infinite: true,
